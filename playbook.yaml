@@ -3,12 +3,10 @@
   become: true
   tasks:
         - name: Install apache httpd
-                 apt:
-                         name: apache2
-                         state: present
+          apt:
+                  name: apache2
+                  state: present
         - name: Copy file with owner and permissions
-                 copy:
-                         src: ~/jenkins-ansible/index.html
-                         dest: /var/www/html
-                         owner: labuser
-                         mode: preserve
+          copy:
+                  src: index.html
+                  dest: /var/www/html
