@@ -1,6 +1,6 @@
 - name: play1
   hosts: all
-  become: all
+  become: true
   tasks:
         - name: Install apache httpd
                 apt:
